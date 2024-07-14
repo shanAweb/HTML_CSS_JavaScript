@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Weather Forecast, with current conditions, wind, 
+    humidity, and what to expect for the next 10 days.">
+    <meta name="keywords" content="Weather App, weather Forecast, 10 day forecast, Today's weather">
+    
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- favicon -->
+    <link rel="icon" href="images/Projectlogo.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- navigation bar -->
+    <header class="navbar">
+        <img src="images/weatherLogo.png" alt="">
+        <a href="index.html" class="logo">Weather Forecast</a>
+    </header>
+
+    <!-- main section for Today's weather -->
+    <section class="main">
+        <div class="search">
+            <input type="text" placeholder="Enter City Name">
+            <button class="btn">Search</button>
+        </div>
+        <div class="error">
+            <p>Invalid city name</p>
+        </div>
+        <!-- Today Weather -->
+        <div class="weather">
+            <img src="images/rain.png" class="weather-icon">
+            <h1 class="temp">22&deg;C</h1>
+            <h2 class="city">Lahore</h2>
+
+            <div class="MoreDetails">
+                <div class="col">
+                    <img src="images/humidity.png" alt="">
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="images/wind.png" alt="">
+                    <div>
+                        <p class="wind">5 km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10-DAY FORECAST -->
+    <section class="first">
+        <div class="center">
+            <h1>10-DAY FORECAST</h1>
+        </div>
+    
+        <div class="main search">
+            <input type="number" class="daysInput" placeholder="Enter days (1 to 10)">
+            <button class="btn" style="width: 37%;" onclick="generateWeather()">Get Weather</button>
+        </div>
+        <section class="For10days"> 
+            <!-- Weather for 10 days -->
+        </section>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
